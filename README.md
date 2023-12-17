@@ -1,8 +1,27 @@
 ## Qewam Task
 
-the collection on the root foloder 
+the collection on the root folder 
 
-here is the test users as per the task documentation 
+1- install packages 
+```bash
+composer install
+```
+2- install migrate table
+```bash
+php artisan migrate  
+```
+3- install passport
+
+```bash
+php artisan passport:install
+```
+3- seed the database
+
+```bash
+php artisan db:seed
+```
+
+## Here is the test users as per the task documentation 
 
 # Users Login credentials
 
