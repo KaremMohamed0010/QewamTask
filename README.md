@@ -15,10 +15,16 @@ php artisan migrate
 ```bash
 php artisan passport:install
 ```
-3- seed the database
+4- seed the database
 
 ```bash
 php artisan db:seed
+```
+
+5- serve the app 
+
+```bash
+php artisan serve
 ```
 
 ## Here is the test users as per the task documentation 
