@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5e9f9656-aec5-42f2-b1de-87ff368e9246",
+		"name": "Invoice-Sys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15353262",
+		"_collection_link": "https://orange-shuttle-125584.postman.co/workspace/New-Team-Workspace~f74efca8-ab36-4820-832b-9c45e9c0c9da/collection/15353262-5e9f9656-aec5-42f2-b1de-87ff368e9246?action=share&source=collection_link&creator=15353262"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user1@examle.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/Auth/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "invoice Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzllMDQ0N2I4MDRiN2ZjNjllMWUxZGY3ZWViZmE4Zjk5ZDA4OGM5OGE1ZWNkYTRiYjcwM2RiMTJkM2RkNTdjOTRlZmIwMjk3OWU4OGE1NDEiLCJpYXQiOjE3MDI4NDYyODUuNzU4NDM0LCJuYmYiOjE3MDI4NDYyODUuNzU4NDM2LCJleHAiOjE3MzQ0Njg2ODUuNzUyNDE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.igLtvZ3Qwo2bCzZ_-GdzXaqhtZ2NZZV7ruj_AOJtcULTPrOS0RQ3vJuhYlrJTBAvOmGGKZI0WroXrQKzVO0WUZpCKtHCsROYu-skUDUWCTagUOnJ2J5MnZ_814F-PNMwrYB6pQd4gn5Ns5oqDvyMQnaEXO4ZVifYB1CS7lNkQLBnEziE01kqh9pavSrGmsVIjq1n39sUw7Yqo3cYrRc8pZYBLebarjYc6n7KCrVx3Tv1BjxlHdmBg5yxbnRSIvRvUZuZrfQXsjlEFSqhAlnUhGNgUYV6_-pahSPAJsQYjTWmqgyogwDtVWuqkc7NJGhUg2mnw0eBXRWEiIoNMFtbqArTYD6ZRSW59Pckcs0iNPDfikfs3mux83FnUrXtO5FXasJXu6kZpYRwsO_s7QuMBgH1FAqA5NmEFrnvSp_8jSkbUYYuVwctRRW-ruIZveGaVK2Dg0daSRDqbVNq7LawsvmLmTvy3EFowvFDS8WdyxtsTkK2tIvpEBQJLCC2C3I2g_FdNUdoN5HIdYejE9ekMKhSXH9UPpx-7QQ_rzYQ3cDdjZoWB-9fv1Khm0GoiGjGELXauhTkw0Bf8CPDKQZV0cnaAg3fTTTnvhnVMeo-f76PjOhoj97V6rf-0p4rYTl4AElg6LZYAgMHqwDYgR0kTv3BCMUBcqewjLJTgj1_6AA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "START",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "END",
+									"value": "2021-03-02",
+									"type": "text"
+								},
+								{
+									"key": "CUSTOMER_ID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/Invoice/invoices-create",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"Invoice",
+								"invoices-create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzllMDQ0N2I4MDRiN2ZjNjllMWUxZGY3ZWViZmE4Zjk5ZDA4OGM5OGE1ZWNkYTRiYjcwM2RiMTJkM2RkNTdjOTRlZmIwMjk3OWU4OGE1NDEiLCJpYXQiOjE3MDI4NDYyODUuNzU4NDM0LCJuYmYiOjE3MDI4NDYyODUuNzU4NDM2LCJleHAiOjE3MzQ0Njg2ODUuNzUyNDE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.igLtvZ3Qwo2bCzZ_-GdzXaqhtZ2NZZV7ruj_AOJtcULTPrOS0RQ3vJuhYlrJTBAvOmGGKZI0WroXrQKzVO0WUZpCKtHCsROYu-skUDUWCTagUOnJ2J5MnZ_814F-PNMwrYB6pQd4gn5Ns5oqDvyMQnaEXO4ZVifYB1CS7lNkQLBnEziE01kqh9pavSrGmsVIjq1n39sUw7Yqo3cYrRc8pZYBLebarjYc6n7KCrVx3Tv1BjxlHdmBg5yxbnRSIvRvUZuZrfQXsjlEFSqhAlnUhGNgUYV6_-pahSPAJsQYjTWmqgyogwDtVWuqkc7NJGhUg2mnw0eBXRWEiIoNMFtbqArTYD6ZRSW59Pckcs0iNPDfikfs3mux83FnUrXtO5FXasJXu6kZpYRwsO_s7QuMBgH1FAqA5NmEFrnvSp_8jSkbUYYuVwctRRW-ruIZveGaVK2Dg0daSRDqbVNq7LawsvmLmTvy3EFowvFDS8WdyxtsTkK2tIvpEBQJLCC2C3I2g_FdNUdoN5HIdYejE9ekMKhSXH9UPpx-7QQ_rzYQ3cDdjZoWB-9fv1Khm0GoiGjGELXauhTkw0Bf8CPDKQZV0cnaAg3fTTTnvhnVMeo-f76PjOhoj97V6rf-0p4rYTl4AElg6LZYAgMHqwDYgR0kTv3BCMUBcqewjLJTgj1_6AA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/Invoice/invoices/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"Invoice",
+								"invoices",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
